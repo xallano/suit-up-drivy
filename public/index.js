@@ -21,7 +21,7 @@ var DRIVY = DRIVY || {};
     var begin = document.querySelector('.begin').value;
     var end = document.querySelector('.end').value;
     var distance = document.querySelector('.distance').value;
-    var option = document.querySelector('.option').value;
+    var option = document.querySelector('.option').checked;
 
     var actors = DRIVY.payActors(car, begin, end, distance, option);
 
