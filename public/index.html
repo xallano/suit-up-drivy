@@ -2,20 +2,60 @@
 <html>
   <head>
     <title>CSS/HTML Workshop with Drivy</title>
+    <link href="index.css" rel="stylesheet" type="text/css" />
   </head>
   <body>
+    <fieldset id="mainfield">
+    <center><h1>SUIT UP DRIVY</h1></center>
+    
     <div id="car">
-      <input class="model" type="text" placeholder="Car model"/>
-      <input class="price-by-day" type="number" placeholder="Price by day"/>
-      <input class="price-by-km" type="number" placeholder="Price by km"/>
+        <fieldset>
+      <legend>Car parameter</legend>
+          <li>
+          <label for=carmodel>Car model:</label>
+          <input class="model" type="text" placeholder="Car model"/></p>
+          </li>
+        
+          <li>
+          <label for=pricebyday>Price by day:</label>
+          <input class="price-by-day" type="number" placeholder="Price by day"/></p>
+        
+        
+          
+          <label for=pricebykm>Price by km:</label>
+          <input class="price-by-km" type="number" placeholder="Price by km"/>
+        </li>
+        </fieldset>
+      
     </div>
+    
+
+    
     <div id="rental">
-      <input class="begin" type="date" placeholder="Rental begin date"/>
-      <input class="end" type="date" placeholder="Rental end date"/>
+      <fieldset>
+      <legend>Rental</legend>
+      <li>
+      <label for=rentalbegindate>Rental begin date</label>
+      <input class="begin" type="date" placeholder="Rental begin date"/></p>
+      <label for=rentalenddate>Rental end date</label>
+      <input class="end" type="date" placeholder="Rental end date"/></p>
+    </li>
+
+      <li>
+      <label for=distancekm>Distance in km</label>
       <input class="distance" type="number" placeholder="Distance in km"/>
-      <input class="option" type="checkbox" placeholder="Deductible option"/>
+    </li>
+    <li>
+      <input class="option" type="checkbox" placeholder="Deductible option"/>Deductible option
+    </li> 
+      </fieldset>
     </div>
-    <button id="compute">Compute</button>
+    
+    </p>
+    <center><button id="compute">Compute</button>
+    </center>
+    </fieldset>
+
     <div id="actors"></div>
     <script id="template" type="x-tmpl-mustache">
       {{#actors}}
@@ -29,5 +69,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.2.1/mustache.min.js"></script>
     <script src="drivy.js"></script>
     <script src="index.js"></script>
+    
   </body>
 </html>
